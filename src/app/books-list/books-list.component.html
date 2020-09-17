@@ -1,0 +1,20 @@
+<div><h2>Books:</h2>
+  <h6 style="float: right; text-align: center; border: 3px solid #26A69A; padding: 5%; border-radius: 5%; box-shadow: -4px 4px 6px #26A69A;">Every time a book is 10 dollars or less,<br>the Sale button will appear!</h6>
+</div>
+<div *ngFor="let book of books; index as bookId">
+  <h3> 
+    <a [title]="book.name + ' details'" [routerLink]="['/books', bookId]">
+      {{ book.name }}
+    </a>
+  </h3>
+  <p><img src={{book.img}} alt={{book.img}} height="20%" width="20%"></p>
+  <h4 *ngIf="book.author">
+    Author: {{ book.author}}
+  </h4>
+  <a class="waves-effect waves-light btn" (click)="share()">
+    <i class="material-icons left">feedback</i>Share</a>
+  <app-books-alert
+    [book]="book"
+    (notify)="onNotify()">
+  </app-books-alert>
+</div>

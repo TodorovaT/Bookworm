@@ -1,1 +1,42 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global Styles */
+
+* {
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #616161;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  router-outlet + *  {
+    padding: 0 16px;
+  }
+
+  
+.cart-item, .shipping-item {
+  width: 100%;
+  min-width: 400px;
+  max-width: 450px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 16px 32px;
+  margin-bottom: 8px;
+  border-radius: 2px;
+  background-color: #EEEEEE;
+}
+
+body {
+  background-color: cornsilk;
+  margin: 0;
+}
+
+h2 {
+  color: #26A69A;
+  text-shadow: -4px 4px 6px #26A69A;
+}

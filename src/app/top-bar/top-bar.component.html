@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/css/materialize.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<div id="container" style="white-space:nowrap; display: inline;">
+    <div style="float: left;">
+        <img src="assets/img/logo.png" alt="logo_bookworm" width="15%" height="15%" style="float: left;">
+        <a [routerLink]="['/']">
+            <h3 style="color: #26A69A; position: relative; text-shadow: -4px 4px 6px #26A69A;">Bookworm.com</h3>
+        </a>
+    </div>
+    <div style="float: right; margin-top: 3%">
+        <a routerLink="/favourite" class="waves-effect waves-light btn">
+            <i class="material-icons left">favorite</i>Favourites</a>
+        <a routerLink="/cart" class="waves-effect waves-light btn">
+            <i class="material-icons left">shopping_cart</i>Checkout</a>
+    </div>
+</div>

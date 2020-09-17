@@ -1,0 +1,45 @@
+<div><h2>Cart:</h2>
+<div class="cart-item" *ngFor="let item of items">
+  <span>{{ item.name }}</span>
+  <span>{{ item.price | currency }}</span>
+</div>
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+
+  <div>
+    <label for="name">
+      Name
+    </label>
+    <input id="name" type="text" formControlName="name" required>
+  </div>
+
+  <div>
+    <label for="lname">
+      Last Name
+    </label>
+    <input id="lname" type="text" formControlName="lname" required>
+  </div>
+
+  <div>
+    <label for="phoneno">
+      Phone Number
+    </label>
+    <input id="phoneno" type="tel" formControlName="phoneno" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"  placeholder="123-456-789"  onclick="this.placeholder=''" required>
+  </div>
+
+  <div>
+    <label for="address">
+      Address
+    </label>
+    <input id="address" type="text" formControlName="address" required>
+  </div>
+
+  <div>
+    <label for="card">
+      Card number
+    </label>
+    <input id="card" type="password" formControlName="card" required>
+  </div>
+
+  <a routerLink="/cart" class="waves-effect waves-light btn" (click)="buy()">
+    <i class="material-icons left">shopping_cart</i>Buy</a>
+</form>
